@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkan Döner & Pizza Haus</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Harici CSS Dosyası -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <img src="kalkan_logo.jpg" alt="Kalkan Logo" class="logo">                        <h1>Pro Sipariş Yöneticisi</h1>
+            <p>Esnek ve Modern Malzeme Sipariş Takip Sistemi</p>
+        </header>
+        
+        <section class="urun-ekle">
+            <h2>Yeni Ürün Ekle</h2>
+            <div class="ekle-form">
+                <input type="text" id="yeniUrunAdi" placeholder="Ürün adını girin">
+                <select id="yeniUrunTuru" class="kategori-select">
+                    <!-- Kategoriler JS ile dinamik olarak doldurulacak -->
+                </select>
+                <button class="btn ekle-btn" onclick="yeniUrunEkle()">
+                    <i class="fas fa-plus"></i> Ekle
+                </button>
+                <button class="btn primary" onclick="kategoriEkle()">
+                    <i class="fas fa-folder-plus"></i> Yeni Kategori
+                </button>
+            </div>
+        </section>
+        
+        <section class="urun-listesi">
+            <h2>Ürünler</h2>
+            <div id="urunListesi" class="urun-grid">
+                <!-- Ürünler JS ile dinamik olarak buraya eklenecek -->
+            </div>
+        </section>
+        
+        <section class="kontroller">
+            <button class="btn primary" onclick="siparisTopla()">
+                <i class="fas fa-check"></i> Siparişi Topla
+            </button>
+            <button class="btn secondary" onclick="yeniListe()">
+                <i class="fas fa-sync"></i> Yeni Liste
+            </button>
+        </section>
+        
+        <section class="siparis-edilecekler">
+            <h2>Sipariş Edilecekler</h2>
+            <div id="siparisOzeti" class="edilecekler-liste"></div>
+        </section>
+        
+        <section class="siparis-gecmisi">
+            <h2>Sipariş Geçmişi</h2>
+            <div class="gecmis-kontroller">
+                <button class="btn danger" onclick="gecmisiSil()">
+                    <i class="fas fa-trash"></i> Geçmişi Sil
+                </button>
+            </div>
+            <div id="siparisGecmisi" class="gecmis-liste"></div>
+        </section>
+        
+        <footer>
+            <p>Latif Kalkan tarafından geliştirildi. Tüm haklar saklıdır.</p>
+        </footer>
+    </div>
+    <!-- Harici JS Dosyası -->
+    <script src="script.js"></script>
+</body>
+</html>
